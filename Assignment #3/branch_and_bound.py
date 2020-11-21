@@ -1,5 +1,9 @@
-from random import randint
 from scipy.optimize import linprog
+
+class Constraint:
+    def __init__(self, lhs, rhs):
+        self.lhs = lhs
+        self.rhs = rhs
 
 class Item:
     def __init__(self, value, weight, amount):
@@ -79,12 +83,15 @@ def branch(node, queue):
     
     node.items[item_idx].amount = 0
     left_node = Node(float('-inf'), False, node.items)
+    queue.append(left_node)
+
+    print(queue[0].items[item_idx].amount)
 
     node.items[item_idx].amount = 1
     right_node = Node(float('-inf'), False, node.items)
-
-    queue.append(left_node)
     queue.append(right_node)
+
+    print(queue[1].items[item_idx].amount)
 
 
 def test_lp():
