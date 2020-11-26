@@ -21,4 +21,7 @@ h = hessian(f, [x1, x2]);
 x1 = intersect(x_0, x_1);
 x2 = intersect(y_0, y_1);
 
-subs(h);
+x1 = -1;
+x2 = -1;
+
+eig(subs(h))
