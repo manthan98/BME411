@@ -1,10 +1,10 @@
 # Adapted from https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
-# A naive recursive implementation of 0-1 Knapsack Problem using Dynamic Programming.
 
 import math
 import time
 import matplotlib.pyplot as plt
 
+# A naive recursive implementation of 0-1 Knapsack Problem using Dynamic Programming.
 def knapSack(W, wt, val, n):
     # Base Case 
     if n == 0 or W == 0: 

@@ -1,9 +1,17 @@
-from branch_and_bound_v2 import Bound, Constraint, BranchAndBoundSolver
-from dynamic_programming import *
+from branch_and_bound import Bound, Constraint, BranchAndBoundSolver
+from dynamic_programming import knapSack
 import matplotlib.pyplot as plt
+import time
 
+# Data structure that simulates the Branch and Bound and Dynamic Programming 
+# algorithms on the 0-1 Knapsack problem dataset.
 class Simulator:
     def simulate(self):
+        """
+        Driver method for the class that runs both B&B and DP implementations over
+        all problem instances. Output is a plot of computation times for both approaches
+        on increasing input size (i.e. design variables) of KPs from dataset.
+        """
         sim_times_bb = self.simulate_bb()
         sim_times_dp = self.simulate_dp()
 
