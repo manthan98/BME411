@@ -11,3 +11,8 @@ f_x4 = diff(L, lambda) == 0;
 [A, B] = equationsToMatrix([f_x1, f_x2, f_x3, f_x4], [x1, x2, x3, lambda]);
 X = linsolve(A, B);
 
+x1 = X(1);
+x2 = X(2);
+x3 = X(3);
+subs(f);
+

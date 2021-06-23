@@ -24,4 +24,9 @@ x2 = intersect(y_0, y_1);
 x1 = -1;
 x2 = -1;
 
-eig(subs(h))
+eig(subs(h));
+
+x1 = 1;
+x2 = 1;
+
+eig(subs(h));

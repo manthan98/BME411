@@ -20,6 +20,7 @@ class Simulator:
         plt.ylabel("Simulation Time (s)")
         plt.xlabel("Number of Items")
         plt.title("Number of Items vs Simulation Time")
+        plt.xticks(range(len(sim_times_bb)), ("5", "6", "7", "7", "8", "10", "15", "24"))
         plt.legend(loc="upper left")
         plt.show()
 
